@@ -471,7 +471,167 @@ body {
 .card-heart {
     position: absolute; top: 14px; right: 14px; width: 38px; height: 38px;
     background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
-    border: none; border <!-- SHOP -->
+    border: none; border-radius: 50%; font-size: 1.1rem; cursor: pointer;
+    color: #888; z-index: 2; transition: all 0.3s;
+}
+.card-heart:hover { color: #C9184A; transform: scale(1.15); }
+.card-heart.liked { color: #C9184A; }
+.card-body { padding: 22px; }
+.card-body h4 { font-size: 1.1rem; font-weight: 800; margin-bottom: 8px; color: white; }
+.card-body .desc { color: rgba(255,255,255,0.5); font-size: 0.85rem; margin-bottom: 14px; line-height: 1.5; }
+.card-rating { display: flex; align-items: center; gap: 4px; margin-bottom: 12px; }
+.card-rating .stars { color: #D4AF37; font-size: 0.85rem; }
+.card-rating .count { color: rgba(255,255,255,0.4); font-size: 0.75rem; margin-left: 4px; }
+.price { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+.price .now { font-weight: 900; color: #D4AF37; font-size: 1.2rem; }
+.price .was { color: rgba(255,255,255,0.3); text-decoration: line-through; font-size: 0.85rem; }
+.price .off {
+    background: rgba(201,24,74,0.2); color: #FF4D8F;
+    padding: 3px 9px; border-radius: 6px; font-size: 0.7rem; font-weight: 700;
+}
+.card-btn {
+    display: block; width: 100%; padding: 13px;
+    background: linear-gradient(135deg, #D4AF37, #e8c547); color: #1a1a2e;
+    border: none; border-radius: 100px; text-decoration: none; text-align: center;
+    font-weight: 800; font-size: 0.75rem; letter-spacing: 1.5px;
+    text-transform: uppercase; cursor: pointer; transition: all 0.3s;
+    box-shadow: 0 6px 20px rgba(212,175,55,0.3);
+}
+.card-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(212,175,55,0.5); }
+
+/* ============ FADE ANIMATIONS ============ */
+@keyframes fadeUp { from{opacity:0;transform:translateY(30px);} to{opacity:1;transform:translateY(0);} }
+@keyframes fadeDown { from{opacity:0;transform:translateY(-30px);} to{opacity:1;transform:translateY(0);} }
+</style>
+</head>
+<body>
+
+<!-- BACKGROUND LAYERS -->
+<div class="wallpaper"></div>
+<div class="polythene"></div>
+<div class="noise"></div>
+<div class="orbs">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+    <div class="orb o4"></div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+    <div class="logo">AuraVibe<b>.</b></div>
+    <div class="nav-menu">
+        <a href="#shop">Shop</a>
+        <a href="#blog">Blog</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#freebies">Freebies</a>
+        <a href="#newsletter" class="cta">Join</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge"><span>Welcome to the Premium Aesthetic World</span></div>
+        <h1>
+            <span class="l1">Elevate Your</span>
+            <span class="l2">Luxury Lifestyle</span>
+            <span class="l3">with effortless elegance</span>
+        </h1>
+        <p>Discover curated collections, hidden gems, exclusive deals, and the art of living beautifully. Your daily dose of premium inspiration starts here.</p>
+        <div class="hero-buttons">
+            <a href="#shop" class="btn btn-gold">Explore Now</a>
+            <a href="#quiz" class="btn btn-glass">Take Style Quiz</a>
+        </div>
+        <div class="trust-bar">
+            <div class="trust-item"><strong>4.9★</strong> <span>50K+ Reviews</span></div>
+            <div class="trust-item"><strong>500+</strong> <span>Curated Picks</span></div>
+            <div class="trust-item"><strong>100%</strong> <span>Free Access</span></div>
+        </div>
+    </div>
+    <div class="scroll-hint">
+        <div class="scroll-mouse"></div>
+        <span>Scroll</span>
+    </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+    <div class="marquee-track">
+        <div class="mq"><span>✨ Luxury Picks</span><div class="dot"></div></div>
+        <div class="mq"><span>💎 Premium Finds</span><div class="dot"></div></div>
+        <div class="mq"><span>🌟 Daily Inspiration</span><div class="dot"></div></div>
+        <div class="mq"><span>👑 Aesthetic Living</span><div class="dot"></div></div>
+        <div class="mq"><span>🌹 Fashion Forward</span><div class="dot"></div></div>
+        <div class="mq"><span>💄 Beauty Secrets</span><div class="dot"></div></div>
+        <div class="mq"><span>🏠 Home Décor</span><div class="dot"></div></div>
+        <div class="mq"><span>💆‍♀️ Self Care</span><div class="dot"></div></div>
+        <div class="mq"><span>✨ Luxury Picks</span><div class="dot"></div></div>
+        <div class="mq"><span>💎 Premium Finds</span><div class="dot"></div></div>
+        <div class="mq"><span>🌟 Daily Inspiration</span><div class="dot"></div></div>
+        <div class="mq"><span>👑 Aesthetic Living</span><div class="dot"></div></div>
+        <div class="mq"><span>🌹 Fashion Forward</span><div class="dot"></div></div>
+        <div class="mq"><span>💄 Beauty Secrets</span><div class="dot"></div></div>
+        <div class="mq"><span>🏠 Home Décor</span><div class="dot"></div></div>
+        <div class="mq"><span>💆‍♀️ Self Care</span><div class="dot"></div></div>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+    <div class="about-box">
+        <div class="about-emoji">👑</div>
+        <h2>Living <em>Beautifully</em> Doesn't Mean Living Expensively</h2>
+        <p>We curate the finest finds, share insider tips, and help you build a life that looks and feels absolutely stunning — while being smart about your choices.</p>
+        <div class="stats">
+            <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Curated Picks</div></div>
+            <div class="stat"><div class="stat-num">50K+</div><div class="stat-label">Happy Readers</div></div>
+            <div class="stat"><div class="stat-num">120+</div><div class="stat-label">Style Guides</div></div>
+            <div class="stat"><div class="stat-num">4.9★</div><div class="stat-label">Rating</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section" id="categories">
+    <div class="section-head">
+        <div class="section-tag">Browse By</div>
+        <h2 class="section-title">Shop by <span class="grad">Category</span></h2>
+        <p class="section-desc">Explore curated collections across every aspect of luxury living</p>
+    </div>
+    <div class="categories">
+        <a href="#shop" class="cat-item">
+            <span class="cat-emoji">👗</span>
+            <h4>Fashion</h4>
+            <p>150+ Items</p>
+        </a>
+        <a href="#shop" class="cat-item">
+            <span class="cat-emoji">💄</span>
+            <h4>Beauty</h4>
+            <p>200+ Items</p>
+        </a>
+        <a href="#shop" class="cat-item">
+            <span class="cat-emoji">🏠</span>
+            <h4>Home</h4>
+            <p>80+ Items</p>
+        </a>
+        <a href="#shop" class="cat-item">
+            <span class="cat-emoji">💎</span>
+            <h4>Jewelry</h4>
+            <p>120+ Items</p>
+        </a>
+        <a href="#shop" class="cat-item">
+            <span class="cat-emoji">👜</span>
+            <h4>Bags</h4>
+            <p>60+ Items</p>
+        </a>
+        <a href="#shop" class="cat-item">
+            <span class="cat-emoji">🕶️</span>
+            <h4>Accessories</h4>
+            <p>90+ Items</p>
+        </a>
+    </div>
+</section><!-- SHOP -->
 <section class="section" id="shop">
     <div class="section-head">
         <div class="section-tag">Handpicked For You</div>
@@ -781,4 +941,526 @@ body {
         </div>
         <div id="palResult" style="background:linear-gradient(135deg, rgba(212,175,55,0.08), rgba(201,24,74,0.08)); border-left:4px solid #D4AF37; padding:22px; border-radius:14px; text-align:left;">
             <h4 style="font-size:1.15rem; color:white; margin-bottom:8px;">🌸 Click a palette above!</h4>
-            <p style="color:rgba(255,255,255,0.7); font-size:0.95rem;">Discover which colors flatter your natu
+            <p style="color:rgba(255,255,255,0.7); font-size:0.95rem;">Discover which colors flatter your natural beauty the most.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FLASH SALE COUNTDOWN -->
+<section class="section" id="sale">
+    <div class="about-box" style="background:linear-gradient(135deg, rgba(201,24,74,0.2), rgba(212,175,55,0.2)); border-color:rgba(212,175,55,0.4);">
+        <div style="font-size:3rem; margin-bottom:15px;">⚡</div>
+        <h2 style="color:white; font-size:clamp(1.6rem, 5vw, 2.4rem); margin-bottom:15px; font-weight:900;">Flash Sale <em style="background:linear-gradient(135deg,#D4AF37,#F7E7CE); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; font-style:italic;">Ends Soon!</em></h2>
+        <p style="color:rgba(255,255,255,0.7); margin-bottom:30px;">Grab exclusive deals before they're gone forever</p>
+        <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom:30px;">
+            <div style="background:rgba(0,0,0,0.3); padding:18px 22px; border-radius:15px; min-width:75px; border:1px solid rgba(212,175,55,0.3);">
+                <div id="days" style="font-size:2rem; font-weight:900; color:#D4AF37;">02</div>
+                <div style="font-size:0.65rem; color:rgba(255,255,255,0.5); letter-spacing:2px; text-transform:uppercase;">Days</div>
+            </div>
+            <div style="background:rgba(0,0,0,0.3); padding:18px 22px; border-radius:15px; min-width:75px; border:1px solid rgba(212,175,55,0.3);">
+                <div id="hours" style="font-size:2rem; font-weight:900; color:#D4AF37;">14</div>
+                <div style="font-size:0.65rem; color:rgba(255,255,255,0.5); letter-spacing:2px; text-transform:uppercase;">Hours</div>
+            </div>
+            <div style="background:rgba(0,0,0,0.3); padding:18px 22px; border-radius:15px; min-width:75px; border:1px solid rgba(212,175,55,0.3);">
+                <div id="mins" style="font-size:2rem; font-weight:900; color:#D4AF37;">30</div>
+                <div style="font-size:0.65rem; color:rgba(255,255,255,0.5); letter-spacing:2px; text-transform:uppercase;">Mins</div>
+            </div>
+            <div style="background:rgba(0,0,0,0.3); padding:18px 22px; border-radius:15px; min-width:75px; border:1px solid rgba(212,175,55,0.3);">
+                <div id="secs" style="font-size:2rem; font-weight:900; color:#D4AF37;">00</div>
+                <div style="font-size:0.65rem; color:rgba(255,255,255,0.5); letter-spacing:2px; text-transform:uppercase;">Secs</div>
+            </div>
+        </div>
+        <a href="#" class="btn btn-gold" id="adLink15">Shop Sale Now 🔥</a>
+    </div>
+</section>
+
+<!-- BLOG -->
+<section class="section" id="blog">
+    <div class="section-head">
+        <div class="section-tag">The Journal</div>
+        <h2 class="section-title">Stories & <span class="grad">Lifestyle Tips</span></h2>
+        <p class="section-desc">Dive into the art of living well</p>
+    </div>
+    <div class="shop-grid">
+        <div class="card">
+            <div class="card-img">💆‍♀️</div>
+            <div class="card-body">
+                <div style="display:inline-block; padding:4px 10px; background:rgba(212,175,55,0.2); color:#D4AF37; font-size:0.62rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; border-radius:100px; margin-bottom:10px;">Beauty</div>
+                <h4>10-Step Korean Skincare That Actually Works</h4>
+                <p class="desc">Get glass skin in 30 days with this proven routine</p>
+                <div style="display:flex; gap:14px; font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:10px;">
+                    <span>🕐 8 min</span><span>♡ 2.4K</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">🏡</div>
+            <div class="card-body">
+                <div style="display:inline-block; padding:4px 10px; background:rgba(212,175,55,0.2); color:#D4AF37; font-size:0.62rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; border-radius:100px; margin-bottom:10px;">Home</div>
+                <h4>Transform Any Room Into Pinterest Perfection</h4>
+                <p class="desc">Budget-friendly home makeover ideas that wow</p>
+                <div style="display:flex; gap:14px; font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:10px;">
+                    <span>🕐 5 min</span><span>♡ 1.8K</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">👗</div>
+            <div class="card-body">
+                <div style="display:inline-block; padding:4px 10px; background:rgba(212,175,55,0.2); color:#D4AF37; font-size:0.62rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; border-radius:100px; margin-bottom:10px;">Fashion</div>
+                <h4>Capsule Wardrobe: 30 Outfits from 15 Pieces</h4>
+                <p class="desc">Minimalist fashion that maximizes style</p>
+                <div style="display:flex; gap:14px; font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:10px;">
+                    <span>🕐 6 min</span><span>♡ 3.1K</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">🧘‍♀️</div>
+            <div class="card-body">
+                <div style="display:inline-block; padding:4px 10px; background:rgba(212,175,55,0.2); color:#D4AF37; font-size:0.62rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; border-radius:100px; margin-bottom:10px;">Wellness</div>
+                <h4>Morning Routines of Successful Women</h4>
+                <p class="desc">Start your day like a CEO</p>
+                <div style="display:flex; gap:14px; font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:10px;">
+                    <span>🕐 7 min</span><span>♡ 4.2K</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">✈️</div>
+            <div class="card-body">
+                <div style="display:inline-block; padding:4px 10px; background:rgba(212,175,55,0.2); color:#D4AF37; font-size:0.62rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; border-radius:100px; margin-bottom:10px;">Travel</div>
+                <h4>Hidden Luxury Hotels Under $150/Night</h4>
+                <p class="desc">Stay in style without breaking the bank</p>
+                <div style="display:flex; gap:14px; font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:10px;">
+                    <span>🕐 4 min</span><span>♡ 5.6K</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">💎</div>
+            <div class="card-body">
+                <div style="display:inline-block; padding:4px 10px; background:rgba(212,175,55,0.2); color:#D4AF37; font-size:0.62rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; border-radius:100px; margin-bottom:10px;">Luxury</div>
+                <h4>Designer Dupes That Look 100% Real</h4>
+                <p class="desc">The best affordable alternatives revealed</p>
+                <div style="display:flex; gap:14px; font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:10px;">
+                    <span>🕐 5 min</span><span>♡ 6.8K</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">💐</div>
+            <div class="card-body">
+                <div style="display:inline-block; padding:4px 10px; background:rgba(212,175,55,0.2); color:#D4AF37; font-size:0.62rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; border-radius:100px; margin-bottom:10px;">Beauty</div>
+                <h4>The Perfect Perfume for Every Occasion</h4>
+                <p class="desc">Find your signature scent guide</p>
+                <div style="display:flex; gap:14px; font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:10px;">
+                    <span>🕐 6 min</span><span>♡ 3.5K</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">🍷</div>
+            <div class="card-body">
+                <div style="display:inline-block; padding:4px 10px; background:rgba(212,175,55,0.2); color:#D4AF37; font-size:0.62rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; border-radius:100px; margin-bottom:10px;">Lifestyle</div>
+                <h4>Host a Dinner Party Like a Pro</h4>
+                <p class="desc">Impressive menu ideas for any occasion</p>
+                <div style="display:flex; gap:14px; font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:10px;">
+                    <span>🕐 8 min</span><span>♡ 2.9K</span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">💰</div>
+            <div class="card-body">
+                <div style="display:inline-block; padding:4px 10px; background:rgba(212,175,55,0.2); color:#D4AF37; font-size:0.62rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; border-radius:100px; margin-bottom:10px;">Money</div>
+                <h4>Look Rich on a Budget: 20 Genius Tricks</h4>
+                <p class="desc">Luxury lifestyle without the price tag</p>
+                <div style="display:flex; gap:14px; font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:10px;">
+                    <span>🕐 6 min</span><span>♡ 8.3K</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials">
+    <div class="section-head">
+        <div class="section-tag">💬 Loved By Thousands</div>
+        <h2 class="section-title">What Our <span class="grad">Community</span> Says</h2>
+        <p class="section-desc">Real stories from real women who transformed their lifestyle</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:22px;">
+        <div style="background:rgba(255,255,255,0.04); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:22px; padding:30px;">
+            <div style="color:#D4AF37; font-size:1.1rem; margin-bottom:15px;">★★★★★</div>
+            <p style="color:rgba(255,255,255,0.8); font-style:italic; line-height:1.7; margin-bottom:20px;">"AuraVibe completely changed how I shop and dress. The curated picks save me hours of scrolling and everything just fits my aesthetic perfectly!"</p>
+            <div style="display:flex; align-items:center; gap:12px;">
+                <div style="width:45px; height:45px; background:linear-gradient(135deg, #C9184A, #D4AF37); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem;">👩</div>
+                <div>
+                    <h5 style="color:white; font-size:0.95rem; font-weight:700;">Sarah M.</h5>
+                    <p style="color:rgba(255,255,255,0.4); font-size:0.75rem;">New York, USA</p>
+                </div>
+            </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:22px; padding:30px;">
+            <div style="color:#D4AF37; font-size:1.1rem; margin-bottom:15px;">★★★★★</div>
+            <p style="color:rgba(255,255,255,0.8); font-style:italic; line-height:1.7; margin-bottom:20px;">"The mood style guide is my daily obsession. I get outfit inspo, fragrance suggestions, AND a playlist. It's like having a personal stylist in my pocket!"</p>
+            <div style="display:flex; align-items:center; gap:12px;">
+                <div style="width:45px; height:45px; background:linear-gradient(135deg, #a18cd1, #fbc2eb); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem;">💁‍♀️</div>
+                <div>
+                    <h5 style="color:white; font-size:0.95rem; font-weight:700;">Emma L.</h5>
+                    <p style="color:rgba(255,255,255,0.4); font-size:0.75rem;">Los Angeles, USA</p>
+                </div>
+            </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:22px; padding:30px;">
+            <div style="color:#D4AF37; font-size:1.1rem; margin-bottom:15px;">★★★★★</div>
+            <p style="color:rgba(255,255,255,0.8); font-style:italic; line-height:1.7; margin-bottom:20px;">"I never knew luxury could be affordable until I found AuraVibe. The dupes and hidden gems they share are absolute game-changers!"</p>
+            <div style="display:flex; align-items:center; gap:12px;">
+                <div style="width:45px; height:45px; background:linear-gradient(135deg, #667eea, #764ba2); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem;">🙋‍♀️</div>
+                <div>
+                    <h5 style="color:white; font-size:0.95rem; font-weight:700;">Jessica R.</h5>
+                    <p style="color:rgba(255,255,255,0.4); font-size:0.75rem;">Miami, USA</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FREEBIES -->
+<section class="section" id="freebies">
+    <div class="section-head">
+        <div class="section-tag">🎁 Free Downloads</div>
+        <h2 class="section-title">Digital <span class="grad">Freebies</span></h2>
+        <p class="section-desc">Beautiful gifts, absolutely free</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:22px;">
+        <div style="background:rgba(255,255,255,0.04); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:24px; padding:36px 26px; text-align:center; transition:all 0.5s;" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(212,175,55,0.4)'" onmouseout="this.style.transform=''; this.style.borderColor='rgba(255,255,255,0.1)'">
+            <div style="width:75px; height:75px; background:linear-gradient(135deg, rgba(212,175,55,0.2), rgba(201,24,74,0.2)); border:1px solid rgba(212,175,55,0.3); border-radius:20px; display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 20px;">📱</div>
+            <h4 style="font-size:1.2rem; font-weight:800; color:white; margin-bottom:10px;">Phone Wallpapers</h4>
+            <p style="color:rgba(255,255,255,0.55); font-size:0.92rem; margin-bottom:24px; line-height:1.6;">50+ stunning HD wallpapers. New collection weekly.</p>
+            <a href="#" style="display:inline-block; padding:12px 28px; background:transparent; border:1.5px solid #D4AF37; color:#D4AF37; border-radius:100px; text-decoration:none; font-size:0.72rem; font-weight:700; letter-spacing:2px; text-transform:uppercase;" id="adLink16">⬇ Download Free</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:24px; padding:36px 26px; text-align:center; transition:all 0.5s;" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(212,175,55,0.4)'" onmouseout="this.style.transform=''; this.style.borderColor='rgba(255,255,255,0.1)'">
+            <div style="width:75px; height:75px; background:linear-gradient(135deg, rgba(212,175,55,0.2), rgba(201,24,74,0.2)); border:1px solid rgba(212,175,55,0.3); border-radius:20px; display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 20px;">📅</div>
+            <h4 style="font-size:1.2rem; font-weight:800; color:white; margin-bottom:10px;">2025 Digital Planner</h4>
+            <p style="color:rgba(255,255,255,0.55); font-size:0.92rem; margin-bottom:24px; line-height:1.6;">Monthly planner with goal & habit tracker included.</p>
+            <a href="#" style="display:inline-block; padding:12px 28px; background:transparent; border:1.5px solid #D4AF37; color:#D4AF37; border-radius:100px; text-decoration:none; font-size:0.72rem; font-weight:700; letter-spacing:2px; text-transform:uppercase;" id="adLink17">⬇ Download Free</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:24px; padding:36px 26px; text-align:center; transition:all 0.5s;" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(212,175,55,0.4)'" onmouseout="this.style.transform=''; this.style.borderColor='rgba(255,255,255,0.1)'">
+            <div style="width:75px; height:75px; background:linear-gradient(135deg, rgba(212,175,55,0.2), rgba(201,24,74,0.2)); border:1px solid rgba(212,175,55,0.3); border-radius:20px; display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 20px;">📖</div>
+            <h4 style="font-size:1.2rem; font-weight:800; color:white; margin-bottom:10px;">Style Guide E-Book</h4>
+            <p style="color:rgba(255,255,255,0.55); font-size:0.92rem; margin-bottom:24px; line-height:1.6;">Build your signature aesthetic step by step.</p>
+            <a href="#" style="display:inline-block; padding:12px 28px; background:transparent; border:1.5px solid #D4AF37; color:#D4AF37; border-radius:100px; text-decoration:none; font-size:0.72rem; font-weight:700; letter-spacing:2px; text-transform:uppercase;" id="adLink18">⬇ Download Free</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:24px; padding:36px 26px; text-align:center; transition:all 0.5s;" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(212,175,55,0.4)'" onmouseout="this.style.transform=''; this.style.borderColor='rgba(255,255,255,0.1)'">
+            <div style="width:75px; height:75px; background:linear-gradient(135deg, rgba(212,175,55,0.2), rgba(201,24,74,0.2)); border:1px solid rgba(212,175,55,0.3); border-radius:20px; display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 20px;">🎨</div>
+            <h4 style="font-size:1.2rem; font-weight:800; color:white; margin-bottom:10px;">Color Palette Pack</h4>
+            <p style="color:rgba(255,255,255,0.55); font-size:0.92rem; margin-bottom:24px; line-height:1.6;">100+ aesthetic palettes for any project.</p>
+            <a href="#" style="display:inline-block; padding:12px 28px; background:transparent; border:1.5px solid #D4AF37; color:#D4AF37; border-radius:100px; text-decoration:none; font-size:0.72rem; font-weight:700; letter-spacing:2px; text-transform:uppercase;" id="adLink19">⬇ Download Free</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:24px; padding:36px 26px; text-align:center; transition:all 0.5s;" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(212,175,55,0.4)'" onmouseout="this.style.transform=''; this.style.borderColor='rgba(255,255,255,0.1)'">
+            <div style="width:75px; height:75px; background:linear-gradient(135deg, rgba(212,175,55,0.2), rgba(201,24,74,0.2)); border:1px solid rgba(212,175,55,0.3); border-radius:20px; display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 20px;">💌</div>
+            <h4 style="font-size:1.2rem; font-weight:800; color:white; margin-bottom:10px;">Social Media Kit</h4>
+            <p style="color:rgba(255,255,255,0.55); font-size:0.92rem; margin-bottom:24px; line-height:1.6;">Instagram templates that boost your aesthetic.</p>
+            <a href="#" style="display:inline-block; padding:12px 28px; background:transparent; border:1.5px solid #D4AF37; color:#D4AF37; border-radius:100px; text-decoration:none; font-size:0.72rem; font-weight:700; letter-spacing:2px; text-transform:uppercase;" id="adLink20">⬇ Download Free</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.04); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:24px; padding:36px 26px; text-align:center; transition:all 0.5s;" onmouseover="this.style.transform='translateY(-8px)'; this.style.borderColor='rgba(212,175,55,0.4)'" onmouseout="this.style.transform=''; this.style.borderColor='rgba(255,255,255,0.1)'">
+            <div style="width:75px; height:75px; background:linear-gradient(135deg, rgba(212,175,55,0.2), rgba(201,24,74,0.2)); border:1px solid rgba(212,175,55,0.3); border-radius:20px; display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 20px;">🍰</div>
+            <h4 style="font-size:1.2rem; font-weight:800; color:white; margin-bottom:10px;">Recipe Collection</h4>
+            <p style="color:rgba(255,255,255,0.55); font-size:0.92rem; margin-bottom:24px; line-height:1.6;">30 gorgeous & healthy recipes to try.</p>
+            <a href="#" style="display:inline-block; padding:12px 28px; background:transparent; border:1.5px solid #D4AF37; color:#D4AF37; border-radius:100px; text-decoration:none; font-size:0.72rem; font-weight:700; letter-spacing:2px; text-transform:uppercase;" id="adLink21">⬇ Download Free</a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+    <div class="section-head">
+        <div class="section-tag">❓ Got Questions?</div>
+        <h2 class="section-title">Frequently <span class="grad">Asked</span></h2>
+        <p class="section-desc">Everything you need to know about AuraVibe</p>
+    </div>
+    <div style="max-width:800px; margin:0 auto;">
+        <div class="faq-item" onclick="toggleFaq(this)" style="background:rgba(255,255,255,0.04); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:18px; padding:22px 26px; margin-bottom:12px; cursor:pointer; transition:all 0.3s;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h4 style="color:white; font-size:1.05rem; font-weight:700; padding-right:15px;">Is AuraVibe really free to use?</h4>
+                <span class="faq-icon" style="color:#D4AF37; font-size:1.5rem; transition:transform 0.3s;">+</span>
+            </div>
+            <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.4s; color:rgba(255,255,255,0.7); font-size:0.95rem; line-height:1.7;">
+                <p style="padding-top:15px;">Yes! AuraVibe is 100% free. All our curated picks, style guides, mood tools, and digital downloads are available without any cost.</p>
+            </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)" style="background:rgba(255,255,255,0.04); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:18px; padding:22px 26px; margin-bottom:12px; cursor:pointer; transition:all 0.3s;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h4 style="color:white; font-size:1.05rem; font-weight:700; padding-right:15px;">How often do you add new products?</h4>
+                <span class="faq-icon" style="color:#D4AF37; font-size:1.5rem; transition:transform 0.3s;">+</span>
+            </div>
+            <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.4s; color:rgba(255,255,255,0.7); font-size:0.95rem; line-height:1.7;">
+                <p style="padding-top:15px;">We add fresh curated picks daily and full new collections every week. Subscribe to our newsletter to stay updated!</p>
+            </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)" style="background:rgba(255,255,255,0.04); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:18px; padding:22px 26px; margin-bottom:12px; cursor:pointer; transition:all 0.3s;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h4 style="color:white; font-size:1.05rem; font-weight:700; padding-right:15px;">Can I request a specific style guide?</h4>
+                <span class="faq-icon" style="color:#D4AF37; font-size:1.5rem; transition:transform 0.3s;">+</span>
+            </div>
+            <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.4s; color:rgba(255,255,255,0.7); font-size:0.95rem; line-height:1.7;">
+                <p style="padding-top:15px;">Absolutely! Send us a message through the newsletter and we'll create custom guides based on popular requests.</p>
+            </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)" style="background:rgba(255,255,255,0.04); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:18px; padding:22px 26px; margin-bottom:12px; cursor:pointer; transition:all 0.3s;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h4 style="color:white; font-size:1.05rem; font-weight:700; padding-right:15px;">Do you ship internationally?</h4>
+                <span class="faq-icon" style="color:#D4AF37; font-size:1.5rem; transition:transform 0.3s;">+</span>
+            </div>
+            <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.4s; color:rgba(255,255,255,0.7); font-size:0.95rem; line-height:1.7;">
+                <p style="padding-top:15px;">Our featured products come from partner brands that ship worldwide. Shipping details vary by product.</p>
+            </div>
+        </div>
+        <div class="faq-item" onclick="toggleFaq(this)" style="background:rgba(255,255,255,0.04); backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1); border-radius:18px; padding:22px 26px; margin-bottom:12px; cursor:pointer; transition:all 0.3s;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h4 style="color:white; font-size:1.05rem; font-weight:700; padding-right:15px;">How do I take the style quiz?</h4>
+                <span class="faq-icon" style="color:#D4AF37; font-size:1.5rem; transition:transform 0.3s;">+</span>
+            </div>
+            <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.4s; color:rgba(255,255,255,0.7); font-size:0.95rem; line-height:1.7;">
+                <p style="padding-top:15px;">Simply scroll to the Quiz section and answer 5 fun questions. Your unique aesthetic personality will be revealed instantly!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="section" id="newsletter">
+    <div class="about-box" style="background:linear-gradient(135deg, rgba(201,24,74,0.15), rgba(212,175,55,0.15)); border-color:rgba(212,175,55,0.3);">
+        <div style="font-size:3rem; margin-bottom:16px; animation:floatY 3s ease-in-out infinite; display:inline-block;">💌</div>
+        <h2>Join the <em>AuraVibe</em> Family</h2>
+        <p>Exclusive deals, early access to new collections, and weekly inspiration — delivered straight to your inbox.</p>
+        <form onsubmit="subForm(event)" style="display:flex; gap:10px; max-width:480px; margin:0 auto; flex-wrap:wrap;">
+            <input type="email" placeholder="Enter your email..." required style="flex:1; min-width:200px; padding:15px 22px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); border-radius:100px; color:white; font-size:0.9rem; outline:none;">
+            <button type="submit" style="padding:15px 30px; background:linear-gradient(135deg, #D4AF37, #e8c547); color:#1a1a2e; border:none; border-radius:100px; font-weight:800; font-size:0.78rem; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">Subscribe ✨</button>
+        </form>
+        <p style="font-size:0.75rem; color:rgba(255,255,255,0.4); margin-top:20px;">🔒 No spam. Unsubscribe anytime.</p>
+    </div>
+</section>
+
+<!-- INSTAGRAM STYLE GALLERY -->
+<section class="section" id="gallery">
+    <div class="section-head">
+        <div class="section-tag">📸 Follow the Vibe</div>
+        <h2 class="section-title">Instagram <span class="grad">@AuraVibe</span></h2>
+        <p class="section-desc">Daily aesthetic inspiration on our feed</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:10px;">
+        <div style="aspect-ratio:1; background:linear-gradient(135deg, #C9184A, #f093fb); border-radius:15px; display:flex; align-items:center; justify-content:center; font-size:3rem; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''">👗</div>
+        <div style="aspect-ratio:1; background:linear-gradient(135deg, #D4AF37, #F7E7CE); border-radius:15px; display:flex; align-items:center; justify-content:center; font-size:3rem; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''">💄</div>
+        <div style="aspect-ratio:1; background:linear-gradient(135deg, #a18cd1, #fbc2eb); border-radius:15px; display:flex; align-items:center; justify-content:center; font-size:3rem; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''">💎</div>
+        <div style="aspect-ratio:1; background:linear-gradient(135deg, #667eea, #764ba2); border-radius:15px; display:flex; align-items:center; justify-content:center; font-size:3rem; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''">🕯️</div>
+        <div style="aspect-ratio:1; background:linear-gradient(135deg, #f5576c, #f093fb); border-radius:15px; display:flex; align-items:center; justify-content:center; font-size:3rem; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''">👜</div>
+        <div style="aspect-ratio:1; background:linear-gradient(135deg, #FA8BFF, #2BD2FF); border-radius:15px; display:flex; align-items:center; justify-content:center; font-size:3rem; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''">🕶️</div>
+        <div style="aspect-ratio:1; background:linear-gradient(135deg, #ff9a9e, #fecfef); border-radius:15px; display:flex; align-items:center; justify-content:center; font-size:3rem; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''">💐</div>
+        <div style="aspect-ratio:1; background:linear-gradient(135deg, #a1c4fd, #c2e9fb); border-radius:15px; display:flex; align-items:center; justify-content:center; font-size:3rem; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''">👠</div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="padding:60px 20px 30px; background:rgba(0,0,0,0.3); backdrop-filter:blur(20px); border-top:1px solid rgba(255,255,255,0.05); position:relative; z-index:2; text-align:center;">
+    <div style="font-size:2.2rem; font-weight:900; background:linear-gradient(135deg, #D4AF37, #F7E7CE); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:14px;">AuraVibe.</div>
+    <p style="color:rgba(255,255,255,0.5); max-width:500px; margin:0 auto 28px; line-height:1.7;">Your daily destination for luxury inspiration and the art of living beautifully.</p>
+    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:35px;">
+        <a href="#" title="Instagram" style="width:44px; height:44px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:1.15rem; transition:all 0.3s;" onmouseover="this.style.borderColor='#D4AF37'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.transform=''">📸</a>
+        <a href="#" title="Pinterest" style="width:44px; height:44px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:1.15rem; transition:all 0.3s;" onmouseover="this.style.borderColor='#D4AF37'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.transform=''">📌</a>
+        <a href="#" title="TikTok" style="width:44px; height:44px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:1.15rem; transition:all 0.3s;" onmouseover="this.style.borderColor='#D4AF37'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.transform=''">🎵</a>
+        <a href="#" title="YouTube" style="width:44px; height:44px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:1.15rem; transition:all 0.3s;" onmouseover="this.style.borderColor='#D4AF37'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.transform=''">▶️</a>
+        <a href="#" title="Twitter" style="width:44px; height:44px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:1.15rem; transition:all 0.3s;" onmouseover="this.style.borderColor='#D4AF37'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'; this.style.transform=''">🐦</a>
+    </div>
+    <div style="display:flex; justify-content:center; gap:25px; flex-wrap:wrap; margin-bottom:25px;">
+        <a href="#about" style="color:rgba(255,255,255,0.5); text-decoration:none; font-size:0.85rem;">About</a>
+        <a href="#shop" style="color:rgba(255,255,255,0.5); text-decoration:none; font-size:0.85rem;">Shop</a>
+        <a href="#blog" style="color:rgba(255,255,255,0.5); text-decoration:none; font-size:0.85rem;">Blog</a>
+        <a href="#freebies" style="color:rgba(255,255,255,0.5); text-decoration:none; font-size:0.85rem;">Freebies</a>
+        <a href="#faq" style="color:rgba(255,255,255,0.5); text-decoration:none; font-size:0.85rem;">FAQ</a>
+    </div>
+    <div style="padding-top:25px; border-top:1px solid rgba(255,255,255,0.05); font-size:0.8rem; color:rgba(255,255,255,0.3);">
+        © 2025 AuraVibe. All rights reserved. Made with 💛 for aesthetic souls.
+    </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed; bottom:25px; right:25px; width:48px; height:48px; background:linear-gradient(135deg, #D4AF37, #C9184A); border:none; border-radius:50%; color:white; font-size:1.3rem; cursor:pointer; z-index:999; opacity:0; visibility:hidden; transition:all 0.3s; box-shadow:0 8px 25px rgba(201,24,74,0.4);">↑</button>
+
+<!-- LIVE CHAT BUTTON -->
+<div style="position:fixed; bottom:25px; left:25px; z-index:999;">
+    <button onclick="alert('💬 Chat feature coming soon! Meanwhile, subscribe to our newsletter for instant updates!')" style="padding:14px 22px; background:linear-gradient(135deg, #667eea, #764ba2); color:white; border:none; border-radius:100px; font-size:0.8rem; font-weight:700; cursor:pointer; box-shadow:0 8px 25px rgba(102,126,234,0.4); display:flex; align-items:center; gap:8px;">
+        💬 Chat
+    </button>
+</div>
+
+<script>
+// QUIZ
+function pickQ(el, step) {
+    var opts = el.parentElement.querySelectorAll('.option');
+    for (var i = 0; i < opts.length; i++) opts[i].classList.remove('picked');
+    el.classList.add('picked');
+    setTimeout(function() {
+        var current = document.getElementById('q' + step);
+        if (current) current.classList.remove('active');
+        if (step < 5) {
+            var next = document.getElementById('q' + (step + 1));
+            var progress = document.getElementById('pb' + (step + 1));
+            if (next) next.classList.add('active');
+            if (progress) progress.classList.add('active');
+        } else {
+            showResult();
+        }
+    }, 400);
+}
+function showResult() {
+    var results = [
+        {icon: '👑', title: 'The Elegant Minimalist', desc: 'You radiate timeless sophistication. Clean, polished, and effortlessly luxurious — think Audrey Hepburn energy.'},
+        {icon: '🌸', title: 'The Bohemian Dreamer', desc: 'Free-spirited and creative. Your aesthetic is warm, eclectic, and utterly enchanting.'},
+        {icon: '✨', title: 'The Modern Trendsetter', desc: 'Bold, confident, always ahead of the curve. You set trends rather than follow them.'},
+        {icon: '🌹', title: 'The Romantic Aesthete', desc: 'Soft, dreamy, and deeply beautiful. You find magic in the little things.'}
+    ];
+    var r = results[Math.floor(Math.random() * results.length)];
+    document.getElementById('rIcon').textContent = r.icon;
+    document.getElementById('rTitle').textContent = r.title;
+    document.getElementById('rDesc').textContent = r.desc;
+    document.getElementById('qResult').classList.add('show');
+}
+
+// MOOD
+var moods = {
+    Happy: {t: '💛 Happy Vibes Outfit', d: 'Flowy sundress + white sneakers + gold hoops. Fragrance: Peony & Blush Suede. Playlist: "Good as Hell" by Lizzo'},
+    Confident: {t: '🔥 Power Boss Outfit', d: 'Tailored blazer + straight pants + pointed heels. Fragrance: Tom Ford Black Orchid. Playlist: "Run the World" by Beyoncé'},
+    Romantic: {t: '💕 Dreamy Romance Outfit', d: 'Satin midi skirt + lace cami + delicate necklace. Fragrance: Chance Eau Tendre. Playlist: "Lover" by Taylor Swift'},
+    Chill: {t: '😌 Cozy Comfort Outfit', d: 'Cashmere hoodie + joggers + fuzzy slippers. Fragrance: By the Fireplace. Playlist: "Golden Hour" by Kacey'},
+    Bold: {t: '🔥 Bold Statement Outfit', d: 'Red leather jacket + black jeans + combat boots. Fragrance: YSL Libre. Playlist: "Unstoppable" by Sia'},
+    Elegant: {t: '👑 Royal Elegance Outfit', d: 'Black silk dress + pearl earrings + clutch bag. Fragrance: Dior J\'adore. Playlist: "Clair de Lune"'}
+};
+function pickMood(el, name) {
+    var cards = document.querySelectorAll('.mood');
+    for (var i = 0; i < cards.length; i++) {
+        cards[i].classList.remove('active');
+        cards[i].style.borderColor = 'transparent';
+    }
+    el.classList.add('active');
+    el.style.borderColor = '#D4AF37';
+    var m = moods[name];
+    document.getElementById('moodRes').innerHTML = '<h4 style="font-size:1.15rem; color:white; margin-bottom:8px;">' + m.t + '</h4><p style="color:rgba(255,255,255,0.7); font-size:0.95rem; line-height:1.6;">' + m.d + '</p>';
+}
+
+// COLOR PALETTE
+var palettes = {
+    Spring: {t:'🌸 You\'re a Spring!', d:'Fresh, warm colors like coral, peach, and mint work best. Avoid heavy dark tones. Your skin has warm undertones with a bright glow.'},
+    Summer: {t:'☀️ You\'re a Summer!', d:'Soft, cool tones like powder blue, lavender, and rose flatter you most. Avoid bright orange. Your skin has cool undertones with a soft finish.'},
+    Autumn: {t:'🍂 You\'re an Autumn!', d:'Rich, warm earthy tones like rust, olive, and gold suit you perfectly. Your skin glows with warm golden undertones.'},
+    Winter: {t:'❄️ You\'re a Winter!', d:'Bold, cool colors like emerald, sapphire, and pure white are your best friends. Your skin has cool undertones with strong contrast.'}
+};
+function pickPalette(name) {
+    var boxes = document.querySelectorAll('.pal-box');
+    for (var i = 0; i < boxes.length; i++) boxes[i].style.borderColor = 'transparent';
+    event.currentTarget.querySelector('.pal-box').style.borderColor = '#D4AF37';
+    var p = palettes[name];
+    document.getElementById('palResult').innerHTML = '<h4 style="font-size:1.15rem; color:white; margin-bottom:8px;">' + p.t + '</h4><p style="color:rgba(255,255,255,0.7); font-size:0.95rem;">' + p.d + '</p>';
+}
+
+// HEART
+function likeIt(btn) {
+    btn.classList.toggle('liked');
+    btn.textContent = btn.classList.contains('liked') ? '♥' : '♡';
+}
+
+// NEWSLETTER
+function subForm(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('button');
+    var input = e.target.querySelector('input');
+    input.value = '';
+    var orig = btn.textContent;
+    btn.textContent = 'Welcome! 🎉';
+    setTimeout(function() { btn.textContent = orig; }, 2500);
+}
+
+// FAQ
+function toggleFaq(el) {
+    var answer = el.querySelector('.faq-answer');
+    var icon = el.querySelector('.faq-icon');
+    if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+        answer.style.maxHeight = '0px';
+        icon.style.transform = 'rotate(0deg)';
+        icon.textContent = '+';
+    } else {
+        answer.style.maxHeight = answer.scrollHeight + 20 + 'px';
+        icon.style.transform = 'rotate(180deg)';
+        icon.textContent = '×';
+    }
+}
+
+// COUNTDOWN
+function updateCountdown() {
+    var end = new Date();
+    end.setDate(end.getDate() + 2);
+    end.setHours(end.getHours() + 14);
+    var now = new Date().getTime();
+    var diff = end - now;
+    var d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    var h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    var s = Math.floor((diff % (1000 * 60)) / 1000);
+    var el;
+    el = document.getElementById('days'); if (el) el.textContent = d < 10 ? '0' + d : d;
+    el = document.getElementById('hours'); if (el) el.textContent = h < 10 ? '0' + h : h;
+    el = document.getElementById('mins'); if (el) el.textContent = m < 10 ? '0' + m : m;
+    el = document.getElementById('secs'); if (el) el.textContent = s < 10 ? '0' + s : s;
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// SPARKLES
+function createSparkles() {
+    for (var i = 0; i < 15; i++) {
+        var s = document.createElement('div');
+        s.className = 'sparkle';
+        s.style.left = Math.random() * 100 + '%';
+        s.style.animationDuration = (Math.random() * 15 + 10) + 's';
+        s.style.animationDelay = (Math.random() * 10) + 's';
+        document.body.appendChild(s);
+    }
+}
+createSparkles();
+
+// SMOOTH SCROLL
+var links = document.querySelectorAll('a[href^="#"]');
+for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function(e) {
+        var href = this.getAttribute('href');
+        if (href && href !== '#') {
+            var target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                var top = target.getBoundingClientRect().top + window.pageYOffset - 80;
+                window.scrollTo({top: top, behavior: 'smooth'});
+            }
+        }
+    });
+}
+
+// BACK TO TOP
+window.addEventListener('scroll', function() {
+    var btn = document.getElementById('backTop');
+    if (btn) {
+        if (window.pageYOffset > 500) {
+            btn.style.opacity = '1';
+            btn.style.visibility = 'visible';
+        } else {
+            btn.style.opacity = '0';
+            btn.style.visibility = 'hidden';
+        }
+    }
+});
+</script>
+
+</body>
+</html>
